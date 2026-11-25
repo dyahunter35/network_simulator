@@ -2,6 +2,8 @@ export type MediumKind = "copper" | "fiber" | "wifi";
 
 export type ScenarioKind = "chat" | "web" | "file";
 
+export type ThemeMode = "dark" | "light";
+
 export interface Scenario {
   id: ScenarioKind;
   title: string;

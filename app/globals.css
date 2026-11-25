@@ -37,7 +37,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
 }
 
@@ -50,7 +50,41 @@ body {
   color: var(--color-mist);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ------------------------------------------------------------- light mode support */
+
+.theme-light {
+  color-scheme: light;
+  --color-ink-950: #f8fafc;
+  --color-ink-900: #f1f5f9;
+  --color-ink-850: #e2e8f0;
+  --color-ink-800: #cbd5e1;
+  --color-ink-750: #94a3b8;
+  --color-ink-700: #64748b;
+  --color-line: #cbd5e1;
+  --color-line-soft: #e2e8f0;
+  --color-mist: #0f172a;
+  --color-dim: #334155;
+  --color-faint: #64748b;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.theme-light .app-bg {
+  background:
+    radial-gradient(60% 50% at 92% -10%, rgba(20, 184, 166, 0.09), transparent 60%),
+    radial-gradient(45% 35% at 4% 100%, rgba(56, 189, 248, 0.07), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.theme-light .app-bg::before {
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(100, 116, 139, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 116, 139, 0.12) 1px, transparent 1px);
 }
 
 ::selection {
