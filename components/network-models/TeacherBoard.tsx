@@ -152,13 +152,13 @@ export function TeacherBoard({
         )}
       </div>
 
-      {/* Main Educational Paragraph for Teachers */}
+      {/* Main Educational Paragraph */}
       <div className={`mt-3 rounded-xl border p-3 text-[12.5px] leading-relaxed ${
         isLight ? "border-teal-200/80 bg-teal-50/50 text-slate-800" : "border-line bg-ink-900/60 text-mist"
       }`}>
         <div className="flex items-center gap-1.5 mb-1.5 font-bold text-[12px]">
           <span className="flex h-4 w-4 items-center justify-center rounded-full bg-teal-500 text-white text-[10px]">✓</span>
-          <span className={isLight ? "text-teal-900" : "text-mint-300"}>فقرة الشرح الصفي للمعلم والطلاب:</span>
+          <span className={isLight ? "text-teal-900" : "text-mint-300"}>مفهوم الطبقة ودورها:</span>
         </div>
         <p className={`${isLight ? "text-slate-700" : "text-dim"} leading-normal`}>
           {isWire
@@ -175,7 +175,7 @@ export function TeacherBoard({
         }`}>
           <div className="flex items-center gap-1.5 font-bold mb-1 text-[11px]">
             <Sparkles size={13} className="text-amber-500" />
-            <span className={isLight ? "text-amber-900" : "text-amber-300"}>التشبيه اليومي البسيط:</span>
+            <span className={isLight ? "text-amber-900" : "text-amber-300"}>تشبيه من الواقع:</span>
           </div>
           <p className={isLight ? "text-amber-900/90" : "text-amber-100/90"}>
             {isWire
@@ -204,14 +204,14 @@ export function TeacherBoard({
         </div>
       </div>
 
-      {/* Classroom Discussion Question (Interactive for high schoolers) */}
+      {/* Interactive Comprehension Question */}
       <div className={`mt-2.5 rounded-xl border p-2.5 text-[11.5px] ${
         isLight ? "border-violet-200 bg-violet-50/60 text-violet-950" : "border-violet-500/30 bg-violet-950/20 text-violet-200"
       }`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5 font-bold text-[11.5px]">
             <HelpCircle size={14} className="text-violet-500" />
-            <span className={isLight ? "text-violet-900" : "text-violet-300"}>سؤال لنقاش الطلاب في الفصل:</span>
+            <span className={isLight ? "text-violet-900" : "text-violet-300"}>اختبر فهمك:</span>
           </div>
 
           <button
@@ -227,7 +227,7 @@ export function TeacherBoard({
 
         <p className={`mt-1 font-medium ${isLight ? "text-violet-950" : "text-violet-100"}`}>
           {isWire
-            ? "سؤال للطلاب: لماذا تكون كابلات الألياف الضوئية أسرع بكثير من الأسلاك النحاسية؟"
+            ? "لماذا تكون كابلات الألياف الضوئية أسرع بكثير من الأسلاك النحاسية؟"
             : layer.classroomQuestion}
         </p>
 
@@ -235,7 +235,7 @@ export function TeacherBoard({
           <div className={`mt-2 rounded-lg border p-2 text-[11px] animate-fadeIn ${
             isLight ? "border-violet-300 bg-white text-slate-800" : "border-violet-500/40 bg-ink-950 text-mist"
           }`}>
-            <strong className={isLight ? "text-teal-800 font-bold" : "text-mint-300 font-bold"}>الإجابة النموذجية: </strong>
+            <strong className={isLight ? "text-teal-800 font-bold" : "text-mint-300 font-bold"}>الإجابة: </strong>
             {isWire
               ? "لأن الألياف الضوئية تنقل ومضات ضوء ليزرية داخل زجاج نقي بسرعة تقارب سرعة الضوء وبدون أي تأثر بالتشويش الكهرومغناطيسي، بينما النحاس يعتمد على إلكترونات الكهرباء التي تتعرض للمقاومة والحرارة."
               : layer.simpleExplanation}

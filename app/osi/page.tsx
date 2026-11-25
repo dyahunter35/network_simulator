@@ -57,7 +57,7 @@ export default function OsiModelPage() {
   const [medium, setMedium] = useState<MediumKind>("copper");
   const [scenario, setScenario] = useState<Scenario>(SCENARIOS[0]);
   const [theme, setTheme] = useState<ThemeMode>("dark");
-  const [viewMode, setViewMode] = useState<ViewMode>("presentation"); // Defaults to Teaching Mode!
+  const [viewMode, setViewMode] = useState<ViewMode>("lab"); // Defaults to Lab Mode
 
   // Load saved preferences
   useEffect(() => {
@@ -221,7 +221,7 @@ export default function OsiModelPage() {
               isLight ? "bg-teal-100 text-teal-800" : "bg-mint-500/20 text-mint-300"
             }`}>
               <Sparkles size={11} />
-              {isPresentation ? "وضع الشرح الصفي للمعلم" : "وضع المعمل المزدوج"}
+              {isPresentation ? "وضع الشرح التفصيلي" : "وضع المعمل المزدوج"}
             </span>
             <h1 className={`text-sm sm:text-base font-bold ${isLight ? "text-slate-900" : "text-mist"}`}>
               نموذج OSI المرجعي (7 طبقات)
