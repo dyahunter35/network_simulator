@@ -4,6 +4,8 @@ export type ScenarioKind = "chat" | "web" | "file";
 
 export type ThemeMode = "dark" | "light";
 
+export type ViewMode = "presentation" | "lab";
+
 export interface Scenario {
   id: ScenarioKind;
   title: string;
@@ -25,7 +27,12 @@ export interface LayerInfo {
   bgLight: string;
   borderColor: string;
   simpleExplanation: string;
+  teachingParagraph: string;
   realWorldAnalogy: string;
+  encapsulationStep: string;
+  decapsulationStep: string;
+  classroomQuestion: string;
+  examTip: string;
   associatedDevice?: string;
   commonProtocols: string[];
   keyFunction: string;
@@ -41,7 +48,12 @@ export interface TcpLayerInfo {
   bgLight: string;
   borderColor: string;
   simpleExplanation: string;
+  teachingParagraph: string;
   realWorldAnalogy: string;
+  encapsulationStep: string;
+  decapsulationStep: string;
+  classroomQuestion: string;
+  examTip: string;
   associatedDevice?: string;
   commonProtocols: string[];
   osiLayersMapped: string;
