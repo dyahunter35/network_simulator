@@ -1,9 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import {
   BookOpen,
   Calculator,
   CircleHelp,
+  Layers,
+  Network,
   PanelLeft,
   PanelRight,
   Play,
@@ -72,6 +75,27 @@ export function TopBar() {
       </div>
 
       <div className="ms-auto flex items-center gap-1.5">
+        {/* Educational Models links */}
+        <div className="me-1 hidden sm:flex items-center gap-1 rounded-lg border border-line bg-ink-900/70 p-0.5">
+          <Link
+            href="/osi"
+            className="flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint-300 transition hover:bg-mint-500/20"
+            title="محاكاة تفاعلية مستمرة لنموذج OSI (7 طبقات)"
+          >
+            <Layers size={13} />
+            <span>محاكي OSI</span>
+          </Link>
+          <span className="h-3 w-px bg-line" />
+          <Link
+            href="/tcp"
+            className="flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[11px] font-medium text-sky-300 transition hover:bg-sky-500/20"
+            title="محاكاة تفاعلية مستمرة لنموذج TCP/IP (4 طبقات)"
+          >
+            <Network size={13} />
+            <span>محاكي TCP/IP</span>
+          </Link>
+        </div>
+
         <div className="me-1 hidden items-center gap-3 rounded-lg border border-line bg-ink-900/60 px-3 py-1.5 xl:flex">
           <Stat label="أجهزة" value={devices.length} />
           <span className="h-3 w-px bg-line" />

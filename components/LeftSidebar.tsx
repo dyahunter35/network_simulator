@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import {
   BookOpen,
@@ -10,8 +11,10 @@ import {
   Clock,
   Command,
   Cpu,
+  Layers,
   Lightbulb,
   ListChecks,
+  Network,
   Play,
   Plus,
   X,
@@ -214,6 +217,28 @@ export function LeftSidebar() {
                       {tag}
                     </span>
                   ))}
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-mint-500/30 bg-gradient-to-b from-mint-950/20 to-ink-900/40 p-2.5">
+                <div className="eyebrow mb-1.5 text-mint-300">نماذج الشبكات التفاعلية (جديد)</div>
+                <div className="grid grid-cols-2 gap-1.5">
+                  <Link
+                    href="/osi"
+                    className="flex flex-col items-center justify-center rounded-lg border border-mint-500/30 bg-ink-950/60 p-2 text-center transition hover:bg-mint-500/10"
+                  >
+                    <Layers size={15} className="text-mint-300 mb-1" />
+                    <span className="text-[10.5px] font-bold text-mist">نموذج OSI</span>
+                    <span className="text-[8.5px] text-faint">7 طبقات + أسلاك</span>
+                  </Link>
+                  <Link
+                    href="/tcp"
+                    className="flex flex-col items-center justify-center rounded-lg border border-sky-500/30 bg-ink-950/60 p-2 text-center transition hover:bg-sky-500/10"
+                  >
+                    <Network size={15} className="text-sky-300 mb-1" />
+                    <span className="text-[10.5px] font-bold text-mist">نموذج TCP/IP</span>
+                    <span className="text-[8.5px] text-faint">4 طبقات + محاكاة</span>
+                  </Link>
                 </div>
               </div>
 

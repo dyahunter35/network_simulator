@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import {
   BookOpen,
@@ -562,7 +563,28 @@ function ReferenceDialog({ tab }: { tab?: "osi" | "protocols" | "commands" }) {
         </div>
 
         {active === "osi" && (
-          <div className="space-y-1">
+          <div className="space-y-1.5">
+            <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-mint-500/30 bg-mint-950/20 p-2.5">
+              <div>
+                <span className="text-[11px] font-bold text-mint-300">محاكاة تفاعلية لحركة البيانات والأسلاك:</span>
+                <p className="text-[9.5px] text-faint">شاهد تغليف البيانات والنبضات الكهربائية في السلك</p>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Link
+                  href="/osi"
+                  className="rounded-lg border border-mint-500/40 bg-mint-500/10 px-2.5 py-1 text-[10.5px] font-semibold text-mint-300 hover:bg-mint-500/20"
+                >
+                  محاكي OSI (7 طبقات) ↗
+                </Link>
+                <Link
+                  href="/tcp"
+                  className="rounded-lg border border-sky-500/40 bg-sky-500/10 px-2.5 py-1 text-[10.5px] font-semibold text-sky-300 hover:bg-sky-500/20"
+                >
+                  محاكي TCP/IP (4 طبقات) ↗
+                </Link>
+              </div>
+            </div>
+
             {OSI.map((layer) => (
               <div key={layer.n} className="flex items-center gap-2.5 rounded-lg border border-line-soft bg-ink-900/35 px-2.5 py-1.5">
                 <span
